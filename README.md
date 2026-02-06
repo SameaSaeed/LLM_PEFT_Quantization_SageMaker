@@ -2,7 +2,7 @@
 
 ## Introduction
 
-LLM_PEFT_QLORA is a comprehensive repository designed to demonstrate the fine-tuning of Large Language Models (LLMs) using Parameter Efficient Fine-Tuning (PEFT) techniques and QLoRA on AWS SageMaker. This solution provides a robust pipeline for data preparation, model configuration, training, evaluation, and deployment, specifically optimized for scalable and cost-effective workflows in the cloud.
+LLM_PEFT_QLORA is a comprehensive repository designed to demonstrate the fine-tuning of Large Language Models (LLMs) using Parameter Efficient Fine-Tuning (PEFT) techniques and QLoRA. This solution provides a robust pipeline for data preparation, model configuration, training, evaluation, and deployment, specifically optimized for scalable and cost-effective workflows in the cloud.
 
 ## Features
 
@@ -20,25 +20,6 @@ LLM_PEFT_QLORA is a comprehensive repository designed to demonstrate the fine-tu
 - Additional dependencies defined in `requirements.txt`
 - An AWS account with permissions to create SageMaker resources
 
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/SameaSaeed/LLM_PEFT_QLORA_SageMaker.git
-   cd LLM_PEFT_QLORA_SageMaker
-   ```
-
-2. Install Python dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Configure AWS credentials:
-   - Ensure your AWS CLI is configured by running:
-     ```bash
-     aws configure
-     ```
-   - Set up IAM roles with SageMaker access if needed.
 
 ## Approach
 
@@ -63,8 +44,8 @@ LLM_PEFT_QLORA is a comprehensive repository designed to demonstrate the fine-tu
 
 ### 5. Deploy the Model
 
-- Deploy your trained model to a SageMaker endpoint:
-- Invoke the endpoint for real-time predictions using the provided client script.
+- Deploy your trained model to an endpoint:
+- Invoke the endpoint for real-time predictions using the client script.
 
 ## System Workflow Overview
 
@@ -76,6 +57,9 @@ flowchart TD
     D --> E[Model Deployment]
     E --> F[Endpoint Inference]
 ```
+## Sample Output (Ollama-based-for local or CPU based inferencing. Use vLLM for production-grade GPU based inferencing)
+
+<img width="227" height="250" alt="ollama_output" src="https://github.com/user-attachments/assets/d59a63bc-796b-4ed9-8acd-62910c93c5f8" />
 
 ## Support
 
