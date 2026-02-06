@@ -59,12 +59,14 @@ flowchart TD
 ```
 ## Sample Output 
 
-(Ollama-based-for local or CPU based inferencing)
+(Ollama-based-for local CPU based inferencing)
 
 <img width="227" height="250" alt="ollama_output" src="https://github.com/user-attachments/assets/d59a63bc-796b-4ed9-8acd-62910c93c5f8" />
 
 
 (vLLM for production-grade GPU based inferencing)
+
+
 <img width="380" height="53" alt="vLLM_output" src="https://github.com/user-attachments/assets/4e480caf-3ac0-4856-a93c-f3e34e07b45d" />
 
 
