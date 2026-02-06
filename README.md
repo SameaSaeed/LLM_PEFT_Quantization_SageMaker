@@ -1,17 +1,15 @@
-# LLM_PEFT_QLORA_SageMaker
+# LLM_PEFT_QLORA
 
 ## Introduction
 
-LLM_PEFT_QLORA_SageMaker is a comprehensive repository designed to facilitate the fine-tuning of Large Language Models (LLMs) using Parameter Efficient Fine-Tuning (PEFT) techniques and QLoRA on AWS SageMaker. This solution provides a robust pipeline for data preparation, model configuration, training, evaluation, and deployment, specifically optimized for scalable and cost-effective workflows in the cloud.
+LLM_PEFT_QLORA is a comprehensive repository designed to demonstrate the fine-tuning of Large Language Models (LLMs) using Parameter Efficient Fine-Tuning (PEFT) techniques and QLoRA on AWS SageMaker. This solution provides a robust pipeline for data preparation, model configuration, training, evaluation, and deployment, specifically optimized for scalable and cost-effective workflows in the cloud.
 
 ## Features
 
 - End-to-end pipeline for QLoRA and PEFT-based LLM fine-tuning
-- Seamless AWS SageMaker integration for distributed and managed training
-- Data preprocessing scripts for supported text datasets
-- Support for multiple model architectures and configurations
-- Experiment tracking and model evaluation utilities
-- Deployment scripts for launching and monitoring endpoints on SageMaker
+- Seamless AWS SageMaker integration for managed training
+- Data preprocessing 
+- Deployment approach for launching and monitoring endpoints on SageMaker
 
 ## Requirements
 
@@ -42,7 +40,7 @@ LLM_PEFT_QLORA_SageMaker is a comprehensive repository designed to facilitate th
      ```
    - Set up IAM roles with SageMaker access if needed.
 
-## Usage
+## Approach
 
 ### 1. Prepare Your Dataset
 
@@ -54,34 +52,19 @@ LLM_PEFT_QLORA_SageMaker is a comprehensive repository designed to facilitate th
 - Edit the configuration files in the `config/` directory to set your model, data paths, hyperparameters, and SageMaker settings.
 - Choose options for PEFT and QLoRA in the configuration.
 
-### 3. Launch Training on SageMaker
+### 3. Launch Training 
 
-- Use the provided training script to start a SageMaker job:
-  ```bash
-  python launch_sagemaker_job.py --config config/your_config.yaml
-  ```
-- Monitor logs and training progress in the SageMaker console.
+- Start a training job:
+- Monitor logs and training progress in the console.
 
 ### 4. Evaluate the Fine-Tuned Model
 
-- After training, use the evaluation utilities in the `evaluation/` directory:
-  ```bash
-  python evaluation/evaluate_model.py --model-path output/model.tar.gz --dataset data/validation.jsonl
-  ```
+- After training, use the evaluation utilities to evaluate model.
 
 ### 5. Deploy the Model
 
 - Deploy your trained model to a SageMaker endpoint:
-  ```bash
-  python deployment/deploy_model.py --model-path output/model.tar.gz
-  ```
 - Invoke the endpoint for real-time predictions using the provided client script.
-
-### 6. Clean Up AWS Resources
-
-- After experimentation, stop endpoints and delete models to avoid unnecessary costs.
-
----
 
 ## System Workflow Overview
 
@@ -94,14 +77,8 @@ flowchart TD
     E --> F[Endpoint Inference]
 ```
 
----
-
 ## Support
 
 For issues or questions, please open an issue in the repository or contact the maintainer via GitHub.
-
----
-
-## License
 
 This repository is licensed under the MIT License. See the LICENSE file for details.
